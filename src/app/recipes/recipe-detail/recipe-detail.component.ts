@@ -15,7 +15,7 @@ export class RecipeDetailComponent implements OnInit {
   }
 
   public addToShoppingList: Function = () => {
-    this.sls.addIngredients(this.recipe.ingredients);
+    this.sls.addIngredient(this.recipe.ingredients);
   }
 
 }

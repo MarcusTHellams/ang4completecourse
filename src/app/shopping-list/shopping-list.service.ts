@@ -15,13 +15,14 @@ export class ShoppingListService {
     return this.ingredients.slice();
   }
 
-  public addIngredient: Function = (ingredient: Ingredient) => {
-    this.ingredients.push(ingredient);
-    this.ingredientsChanged.emit(this.ingredients.slice());
-  }
+  public addIngredient: Function = (ingredient: Ingredient | Ingredient[]) => {
+    if ((ingredient instanceof Ingredient)) {
+      this.ingredients.push(ingredient);
+    } else if ((ingredient instanceof Array)) {
+      this.ingredients = this.ingredients.concat(ingredient);
 
-  public addIngredients: Function = (ingredients: Ingredient[]) => {
-    this.ingredients = this.ingredients.concat(ingredients);
+    }
+
     this.ingredientsChanged.emit(this.ingredients.slice());
   }
 
