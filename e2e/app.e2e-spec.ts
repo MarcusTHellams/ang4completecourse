@@ -1,10 +1,10 @@
-import { Ang4completecoursePage } from './app.po';
+import { NewCliPage } from './app.po';
 
-describe('ang4completecourse App', () => {
-  let page: Ang4completecoursePage;
+describe('new-cli App', () => {
+  let page: NewCliPage;
 
   beforeEach(() => {
-    page = new Ang4completecoursePage();
+    page = new NewCliPage();
   });
 
   it('should display message saying app works', () => {
