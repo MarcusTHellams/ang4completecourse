@@ -20,4 +20,9 @@ export class ShoppingListService {
     this.ingredientsChanged.emit(this.ingredients.slice());
   }
 
+  public addIngredients: Function = (ingredients: Ingredient[]) => {
+    this.ingredients = this.ingredients.concat(ingredients);
+    this.ingredientsChanged.emit(this.ingredients.slice());
+  }
+
 }
