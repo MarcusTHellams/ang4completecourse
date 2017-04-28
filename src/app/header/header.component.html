@@ -1,22 +1,39 @@
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a href="javascript:void(0)" class="navbar-brand">Recipe Book</a>
-    </div>
-    <div class="collapse navbar-collapse">
-      <ul class="nav navbar-nav">
-        <li><a href="javascript:void(0)" (click)="onSelect('recipes')">Recipes</a></li>
-        <li><a href="javascript:void(0)" (click)="onSelect('shopping-list')">Shopping List</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li class="dropdown" dropdown>
-          <a href="javascript:void(0)" class="dropdown-toggle" role="button">Manage <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="javascript:void(0)">Save Data</a></li>
-            <li><a href="javascript:void(0)">Fetch Data</a></li>
-          </ul>
-        </li>
-      </ul>
+<!--<nav class="navbar navbar-light bg-faded">
+
+  <a href="javascript:void(0)" class="navbar-brand">Recipe Book</a>
+  <div class="navbar-collapse">
+    <ul class="navbar-nav">
+      <li class="nav-item"><a href="javascript:void(0)" (click)="onSelect('recipes')">Recipes</a></li>
+      <li class="nav-item"><a href="javascript:void(0)" (click)="onSelect('shopping-list')">Shopping List</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li class="dropdown" dropdown>
+        <a href="javascript:void(0)" class="dropdown-toggle" role="button">Manage <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="javascript:void(0)">Save Data</a></li>
+          <li><a href="javascript:void(0)">Fetch Data</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>-->
+
+<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+  <a class="navbar-brand" href="javascript:void(0)">Recipe Book</a>
+
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item">
+      <a class="nav-link" href="javascript:void(0)" (click)="onSelect('recipes')">Recipes</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="javascript:void(0)" (click)="onSelect('shopping-list')">Shopping List</a>
+    </li>
+  </ul>
+  <div ngbDropdown class="d-inline-block">
+    <button class="btn btn-primary" id="dropdownBasic1" ngbDropdownToggle>Toggle dropdown</button>
+    <div class="dropdown-menu" aria-labelledby="dropdownBasic1">
+      <button class="dropdown-item">Save Data</button>
+      <button class="dropdown-item">Fetch Data</button>
     </div>
   </div>
 </nav>
